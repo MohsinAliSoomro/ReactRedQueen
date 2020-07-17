@@ -1,9 +1,22 @@
-.animate{
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+body{
+  background-image: url(./538210fd4acf5b3568378a376d1458ea.jpg);
+}
+.alice{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cake{
+  position: absolute;
+  bottom: 0px;
+  left: 100px;
+}
+.bottle{
+  position: absolute;
+  bottom: 0px;
+  left: 900px;
+}
+.btn{
+  background: transparent;
+  border: 0px;
 }
