@@ -1,31 +1,38 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import useWebAnimations from "@wellyshen/use-web-animations";
 
 function App() {
-  const { ref, animate } = useWebAnimations();
+  const { ref, animate,getAnimation } = useWebAnimations();
 
-  
-    const SmallAlice = (e) =>{
+    function aliceChange(){
       animate({
         keyframes:[
-          {transform:'scale(1.1)'},
-          {transform:'scale(1.2)'},
-          {transform:'scale(1.4)'},
+          { transform: 'translate(0, 0) scale(.5)' },
+          { transform: 'translate(0, 0) scale(2)' }   
         ],
         timing:{
-          duration:3000
+          duration: 8000, 
+          easing: 'ease-in-out', 
+          fill: 'both'
+          
         }
       })
+    }
+    function SmallAlice(){
+      aliceChange();
      }
-     const BigAlice = (e) =>{
+     
+    
+    const BigAlice = (e) =>{
       animate({
         keyframes:[
-          {transform:'scale(1)'},
-          {transform:'scale(0)'}
+          {transform:'scale(0.1)'}
         ],
         timing:{
-          duration:3000
+          duration:3000,
+          iterations:1,
+          playbackRate:1.5,
         }
       })
      }
